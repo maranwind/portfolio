@@ -1,0 +1,21 @@
+@mixin tablets {
+
+	@media (min-width: 480px) and (max-width: 750px){
+
+	@content; 
+}
+
+}
+
+
+@import '_menu';
+
+@import '_inicio';
+
+@import '_sobre';
+
+@import '_sobre2';
+
+@import '_galeria';
+
+@import '_contacto';

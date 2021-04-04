@@ -1,0 +1,30 @@
+@media (min-width: 50px) and (max-width: 320px){
+
+	.inter-fondo{
+
+			font-size: 40px
+	}
+
+
+}
+
+@media (min-width: 50px) and (max-width: 600px){
+
+.productos{
+	height: 160%;
+	flex-direction: column;
+	.vender{
+		height: 250px;
+		width: 280px;
+		position: relative;
+		z-index: 10;
+		img{
+			height: 60%;
+		}
+
+	}
+
+}
+
+
+}

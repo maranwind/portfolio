@@ -1,0 +1,136 @@
+
+.banner{
+	height: 15%;
+	width: 100%;
+	background:#E0D6DF;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 3;
+	transition: 1s;
+
+
+}
+.banner .icono{
+	width: 5%;
+	margin-right: 20px;
+	cursor: pointer;
+	margin-left: 10px; 
+}
+.banner .marca{
+	font-size: 50px;
+	color: #E32DC0;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: Edwardian Script ITC;
+
+}
+.banner .icono .barra{
+	width: 100%;
+	background-color: white;
+	border-radius: 50px;
+	transition: 0.5s;
+	height: 5%;
+
+
+}
+.banner .icono .barra:nth-child(1){
+	margin-top: 3px;
+
+}
+.banner .icono .barra:nth-child(2){
+	margin-top: 10px;
+	
+}
+.banner .icono .barra:nth-child(3){
+	margin-top: 10px;
+	
+}
+/*banner*/
+/*navegacion*/
+.container-navegar{
+	width: 0;
+	height: 100%;
+	background: #E0D6DF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	overflow: hidden;
+	position: fixed;
+	z-index: 2;
+}
+.container-navegar ul{
+	width: 100%;
+	text-align: center;
+
+}
+.container-navegar ul li{
+	color: white;
+	list-style: none;
+	margin-top: 20px;
+	width: 100%;
+
+
+}
+
+.container-navegar ul li a{
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-radius: 50px;
+	transition: 0.5s;
+	border-bottom: 1px solid #000;
+
+
+}
+.container-navegar ul li a:hover{
+	margin-left: 20px;
+	background: #F197E0;
+	color: #9B3B94;
+
+
+}
+@media screen and (min-width:300px ) and (max-width: 850px){
+
+.banner .icono{
+	width: 7%;
+
+}
+
+
+
+
+}
+@media screen and (min-width:650px ) and (max-width: 850px){
+
+.banner .icono{
+	width: 7%;
+
+}
+
+
+}
+@media screen and (min-width:400px ) and (max-width: 650px){
+
+.banner .icono{
+	width: 10%;
+
+}
+
+
+
+
+}
+@media screen and (min-width:200px ) and (max-width: 400px){
+
+.banner .icono{
+	width: 14%;
+
+}
+
+
+}

@@ -1,0 +1,37 @@
+@media (min-width: 50px) and (max-width: 620px){
+
+	.habilidades{
+		height: auto;
+		.skills{
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 25% 25% 25% 25%;
+		}
+	}
+
+
+
+
+}
+@media (min-width: 50px) and (max-width: 335px){
+
+	.habilidades{
+		height: auto;
+		h1{
+			width: 200px;
+			font-size: 35px;
+		}
+		.skills{
+			width: 95%;
+			grid-template-columns: 33.33% 33.33% 33.33%;
+			grid-template-rows: 33.33% 33.33% 33.33%;
+			img{
+				width: 55px;
+				height: 55px;
+
+			}
+		}
+	}
+
+
+
+}

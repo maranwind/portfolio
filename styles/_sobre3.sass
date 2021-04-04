@@ -1,0 +1,60 @@
+.sobre3
+	width: 100%
+	height: 100%
+	background: $azul
+	display: flex
+	.imagen-2
+		width: 50%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		.gear-mundo
+			width: 300px
+			height: 300px
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			.gear2
+				width: 400px
+				height: 400px
+				position: absolute
+				animation: vuelta2 3s linear infinite
+			.globo
+				width: 230px
+				height: 230px
+				position: relative
+				z-index: 10
+				animation: mundo 3s linear infinite
+	.content-sobre3
+		width: 50%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		text-align: center
+		color: $letras
+		h5
+			font-size: 25px
+			font-family: vivaldi
+		h1
+			width: 90%
+			font-size: 50px
+			border-bottom: 2px solid $letras
+			margin-bottom: 15px
+		p
+			font-size: 25px
+			width: 90%
+
+
+@keyframes vuelta2
+	100%
+		transform: rotateZ(360deg)
+
+@keyframes mundo
+	50%
+		transform: translateY(-12px)
+	100%
+		transform: translateY(0px)

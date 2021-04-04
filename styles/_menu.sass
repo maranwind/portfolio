@@ -1,0 +1,61 @@
+header
+	width: 100%
+	height: 15%
+	background: $negro
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: fixed
+	z-index: 21
+	.marca
+		font-family: vivaldi
+		font-size: 23px
+		color: white
+	.icono
+		width: 50px
+		height: 50px
+		margin-top: 5px
+		margin-right: 10px
+		cursor: pointer
+		.barra
+			width: 50px
+			height: 2px
+			background: white
+			border-radius: 30px
+			margin-top: 10px
+			cursor: pointer
+
+
+nav
+	width: 0
+	overflow: hidden
+	height: 100%
+	position: fixed
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	background: $negro
+	position: fixed
+	z-index: 20
+	transition: 0.5s
+	ul
+		text-align: center
+		li
+			list-style: none
+			margin: 10px
+			background: $morado
+			border-radius: 20px
+			width: 150px
+			height: 30px
+			transition: 1s
+			border: 1px solid white
+			a
+				color: white
+				text-decoration: none
+				font-size: 25px
+		li:hover
+			background: white
+			a
+				color: $morado
+

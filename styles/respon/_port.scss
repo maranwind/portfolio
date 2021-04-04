@@ -1,0 +1,41 @@
+@media (min-width: 100px) and (max-width: 770px){
+
+.port{
+	height: auto;
+	.palabras-port{
+		h5{
+			font-size: 20px;
+		}
+		h1{
+			font-size: 50px;
+			width: 220px;
+
+		}
+
+	}
+	.content-works{
+		display: flex;
+		flex-direction: column;
+
+	}
+}
+
+
+}
+@media (min-width: 100px) and (max-width: 340px){
+.port{
+	.palabras-port{
+		h1{
+			font-size: 50px;
+		}
+		p{
+			width: 90%;
+
+		}
+
+	}
+
+}
+
+
+}

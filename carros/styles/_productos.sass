@@ -1,0 +1,58 @@
+.inter-fondo
+	width: 100%
+	height: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	background: url("../multi/produc.jpg")
+	background-size: cover
+	background-position: center
+	font-size: 50px
+	font-family: vivaldi
+	color: $rojo_suave
+	box-shadow: 1px 3px 30px 31px $rojo
+	position: relative
+	z-index: 5 
+
+.productos
+	width: 100%
+	height: 100%
+	background: $negro
+	display: flex
+	justify-content: center
+	align-items: center
+	.vender
+		width: 350px
+		height: 60%
+		margin: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: $rojo_suave
+		color: $blanco
+		box-shadow: 1px 3px 97px -42px rgba(0,0,0,0.3)
+		border-radius: 10px
+		transition: 0.5s
+		text-align: center
+		img
+			width: 100%
+			height: 70%
+			border-top-right-radius: 10px
+			border-top-left-radius: 10px
+		.btn-3
+			width: 80px
+			height: 30px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 2px solid $blanco
+			border-radius: 25px
+			margin-top: 20px
+			a
+				color: $blanco
+				text-decoration: none
+	.vender:hover
+		transform: translateY(-10px)
+		
+
+

@@ -1,0 +1,44 @@
+.galeria
+	width: 100%
+	height: 100%
+	position: relative
+	background: $crema
+	display: flex
+	flex-direction: column
+	align-items: center
+	.tria-1, .tria-2
+		width: 75px
+		height: 0px
+		position: absolute
+		border-bottom: 140px solid transparent
+		top: 0
+	.tria-1
+		border-left: 500px solid $verde
+		left: 0
+	.tria-2
+		border-right: 500px solid $verde
+		right: 0
+	.content-h3
+		width: 40%
+		text-align: center
+		border-bottom: 2px solid $marron_oscuro
+		margin-top: 8%
+		h3
+			font-size: 50px
+			font-family: vivaldi
+			color: $marron_oscuro
+			font-weight: bold
+	.galery
+		width: 80%
+		height: 80%
+		display: grid 
+		grid-template-columns: 50% 50%
+		grid-template-rows: 50% 50%
+		img
+			width: 90%
+			height: 90%
+			justify-self: center
+			align-self: center
+
+
+

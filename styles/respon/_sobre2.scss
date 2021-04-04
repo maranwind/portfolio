@@ -1,0 +1,70 @@
+@media (min-width: 50px) and (max-width: 780px){
+	.sobre2{
+		height: auto;
+		.content-1{
+			h5{
+				font-size: 15px;
+			}
+			h1{
+				font-size: 35px;
+			}
+			p{
+				width: 95%;
+			}
+
+		}
+	}
+
+}
+@media (min-width: 50px) and (max-width: 580px){
+	.sobre2{
+		flex-direction: column;
+		align-items: center;
+		.content-1{
+			width: 100%;
+
+
+		}
+		.anima{
+			width: 100%;
+
+		}
+	}
+
+
+}
+
+
+@media (min-width: 50px) and (max-width: 321px){
+	.sobre2{
+		.anima{
+			.content-anima{
+				width: 160px;
+				height: 160px;
+				.engranaje1, .engranaje2{
+					width: 80px;
+					height: 80px;
+				}
+				.cerebro{
+					width: 140px;
+					height: 140px;
+
+
+				}
+			}
+
+		}
+	}
+
+}
+@media (min-width: 50px) and (max-width: 253px){
+
+.sobre2{
+		.content-1{
+			p{
+				font-size: 20px;
+			}
+		}
+
+}
+}

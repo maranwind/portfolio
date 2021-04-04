@@ -1,0 +1,27 @@
+.marcas
+	width: 100%
+	height: 50%
+	background: $negro
+	position: relative
+	display: grid
+	grid-template-columns: 25% 25% 25% 25%
+	grid-template-rows: 100%
+	.tria-1, .tria-2
+		width: 70px
+		height: 0
+		border-bottom: 150px solid transparent
+		position: absolute
+		top: 0
+	.tria-1
+		border-left: 500px solid $rojo_suave
+		left: 0
+	.tria-2
+		border-right: 500px solid $rojo_suave
+		right: 0
+	img
+		align-self: center
+		justify-self: center
+		width: 160px
+		height: 160px
+		position: relative
+		z-index: 3

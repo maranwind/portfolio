@@ -1,0 +1,45 @@
+@media (min-width: 100px) and (max-width: 720px){
+
+	.marcas{
+		height: 100%;
+		grid-template-columns: 100% ;
+		grid-template-rows: 25% 25% 25% 25%;
+
+		.tria-1, .tria-2{
+			border-bottom: 120px solid transparent;
+
+		}
+		.tria-1{
+			border-left: 400px solid #830000;
+		}
+		.tria-2{
+			border-right: 400px solid #830000;
+		}
+		img{
+			width: 100px;
+			height: 100px;
+		}
+
+	}
+
+
+}
+@media (min-width: 100px) and (max-width: 600px){
+
+	.marcas{
+		padding-top: 70px;
+	
+		.tria-1, .tria-2{
+			border-bottom: 100px solid transparent;
+
+		}
+		.tria-1{
+			border-left: 350px solid #830000;
+		}
+		.tria-2{
+			border-right: 350px solid #830000;
+		}
+
+
+}
+}

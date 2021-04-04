@@ -1,0 +1,33 @@
+@media (min-width: 200px) and (max-width: 700px) {
+
+.contacto{
+	height: auto;
+	padding: 10%;
+	flex-direction: column;
+	align-items: center;
+	.container-words-2{
+		width: 100%;
+		.content-h1{
+				h1{
+					font-size: 40px;
+			
+	}
+}
+	.content-icon{
+		width: 100%;
+		align-items: flex-start;
+
+}
+
+}
+	.tria-1,.tria-2{
+		border-top: 100px solid transparent
+	}
+	.tria-1{
+		border-left: 250px solid #BD9354
+}
+	.tria-2{
+		border-right: 250px solid #BD9354
+}
+}
+}

@@ -1,0 +1,55 @@
+@media (min-width: 200px) and (max-width: 620px) {
+
+.galeria{
+	.content-h3{
+		margin-top: 20%;
+		h3{
+			font-size: 30px;
+
+		}
+
+		
+	}
+	
+}
+
+}
+		
+@media (min-width: 100px) and (max-width: 560px) {
+
+.galeria{
+	height: auto;
+	padding: 3%;
+	.galery{
+		grid-template-columns: 100% ;
+		grid-template-rows: 25% 25% 25% 25%;
+		img{
+			width: 70%;
+
+		}
+
+
+	}
+
+
+}
+}
+@media (min-width: 100px) and (max-width: 560px){
+.galeria{ 
+	.tria-1,.tria-2{
+		border-bottom: 80px solid transparent
+
+	}
+	.tria-1{
+		border-left: 250px solid #E3D18A;
+
+
+
+	} 
+	.tria-2{
+		border-right: 250px solid #E3D18A ;
+
+	}
+}
+
+}

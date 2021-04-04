@@ -1,0 +1,49 @@
+@media (min-width: 200px) and (max-width: 650px){
+
+	.inicio{
+		.fondo{
+			justify-content: center;
+			.palabras{
+				width: 90%;
+				.container-words{
+
+					h6{
+						background: #EEEBDD;
+						border-radius: 20px;
+						width: 150px;
+
+					}
+					.btn-1{
+						box-shadow: 0px 0px 0px rgba(0,0,0,1);
+
+
+					}
+				}
+			}
+		}
+	}
+
+
+}
+@media  (min-width: 100px) and (max-width: 385px){
+
+
+	.inicio{
+		.fondo{
+			.palabras{
+				width: 100%;
+				margin: 0;
+				
+				.container-words{
+
+					p{
+						font-size: 20px;
+
+					}
+				}
+			}
+		}
+	}
+
+
+}

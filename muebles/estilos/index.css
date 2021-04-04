@@ -1,0 +1,264 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+}
+body{
+	background: #EFE9EF;
+	overflow-x: hidden;
+
+
+}
+.espacio{
+	width: 100%;
+	height: 5%;
+
+}
+.fondo{
+	width: 100%;
+	height: 120%;
+	background: url(../images/a.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.fondo .contenedorPre{
+	height: 200px;
+	width: 100%;
+	display: grid;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	
+	
+
+}
+.contenedorPre .welcome, .contenedorPre .to,.contenedorPre .texto{
+	font-family: Freestyle Script;
+
+
+}
+.mueble{
+	font-size: 70px;
+	font-family: Edwardian Script ITC;
+	color: #EFB3E6;
+	font-weight: bold;
+}
+.elementos{
+	width: 100%;
+	height: 50%;
+	background: #EFE9EF;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 100%;
+	grid-gap: 3px;
+
+
+}
+.elementos .element{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+} 
+.elementos .element .container-element{
+	width: 100px;
+	height: 150px;
+	text-align: center;
+
+}
+.elementos .element .container-element img{
+	width: 100%;
+	height: 100px;
+
+}
+.elementos .element .container-element p{
+	margin-top: 10px;
+
+}
+.elementos .element .container-element p:nth-child(3){
+	font-size: 12px;
+
+}
+
+.productos{
+	height: 300%;
+	width: 100%;
+
+}
+.productos .productoPrincipal{
+	width: 100%;
+	height: 50%;
+	
+
+
+}
+.productos .productoPrincipal .imageProductoPrin{
+	width: 100%;
+	height: 70%;
+	background:#EFE9EF;
+
+	
+
+
+}
+.productos .productoPrincipal .imageProductoPrin p{
+	text-align: center;
+	font-family:Freestyle Script ;
+	border-bottom: solid 2px pink;
+	font-size: 50px;
+	background:#EFE9EF;
+	color: #000;
+
+}
+.productos .productoPrincipal .imageProductoPrin .productoPrin{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+
+}
+.productos .productoPrincipal .imageProductoPrin .productoPrin img{
+	width: 80%;
+	height: 80%;
+
+
+}
+.productos .productoPrincipal .textoProductoPrinc{
+	background:#EFE9EF;
+	text-align: center;
+	width: 100%;
+	height: 30%;
+
+
+}
+.productos .productoPrincipal .textoProductoPrinc p{
+	font-size: 20px;
+	font-family:Times New Roman ;
+	margin-right: 15px;
+	margin-left: 15px;
+
+}
+.productos .productosOtros{
+	width: 100%;
+	height: 50%;
+
+	
+
+}
+.productos .productosOtros .textOtros{
+	height: 5%;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-family:Freestyle Script ;
+	border-bottom: solid 2px pink;
+
+
+}
+.productos .productosOtros .miniGalery{
+	height: 95%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	grid-gap: 20px;
+
+
+}
+.productos .productosOtros .miniGalery .miniGal{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+.productos .productosOtros .miniGalery .miniGal img{
+	width: 80%;
+	height: 80%;
+
+}
+.irAgalery{
+	width: 100%;
+	height:60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 10px dotted pink;
+	 
+
+}
+.irAgalery .botonGaleria{
+	width: 200px;
+	height: 20%;
+	background: pink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	font-family:Freestyle Script ;
+	color: white;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px 2px #A01496;
+	transition: 0.5s;
+	cursor: pointer;
+
+}
+.irAgalery .botonGaleria:hover{
+margin-top: 5px;
+margin-left: 5px;
+box-shadow: 2px 2px 2px 0.5px #A01496;
+
+
+}
+.irAgalery .botonGaleria a{
+	transition: 0.5s;
+
+}
+
+.irAgalery .botonGaleria a:hover{
+color: white;
+
+}
+.sobreNos{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	width: 100%;
+	height: 100%;
+
+
+}
+.sobreNos .sobreCap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.sobreNos .sobreCap .informacionSobre{
+	text-align:left;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.sobreNos .sobreCap .cubreImagen{
+	width: 80%;
+	height: 100%;
+	background: #F793E9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 83% 17% 81% 19% / 22% 78% 22% 78% ;
+
+}
+.sobreNos .sobreCap .cubreImagen img{
+	width: 80%;
+	height: 80%;
+	border-radius: 83% 17% 81% 19% / 22% 78% 22% 78% ;
+}

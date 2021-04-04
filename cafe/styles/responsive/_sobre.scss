@@ -1,0 +1,47 @@
+@media (min-width: 200px) and (max-width: 780px){
+.sobre{
+		height: auto;
+		padding: 5px;
+		.content-h1{
+			width: 90%;
+			h1{
+				font-size: 35px;
+
+			}
+		p{
+			width: 90%;
+			font-size: 18px;
+		}
+			
+		} 
+}
+
+}
+@media (min-width: 200px) and (max-width: 418px) {
+	.sobre{
+		height: auto;
+		padding: 5px;
+		.content-h1{
+			h1{
+				font-size: 40px;
+
+			}
+		}
+	}
+
+
+}
+@media (min-width: 200px) and (max-width: 315px){
+.sobre{
+		.content-h1{
+		p{
+			width: 90%;
+			font-size: 15px;
+		}
+			
+		} 
+}
+
+
+
+}

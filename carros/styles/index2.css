@@ -1,0 +1,401 @@
+/*Paleta de colores*/
+/*Paleta de colores*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 120;
+  background: #610000;
+}
+header .marca {
+  color: #1b1717;
+  font-family: vivaldi;
+  font-size: 20px;
+  width: 15%;
+  text-align: center;
+  margin: 10px;
+  position: relative;
+  z-index: 7;
+  background: #EEEBDD;
+  border-radius: 20px;
+  box-shadow: -1px -7px 38px 1px #EEEBDD;
+}
+header .menu-1 {
+  width: 70%;
+  display: flex;
+  margin-right: 20px;
+}
+header .menu-1 ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-left: 20%;
+}
+header .menu-1 ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  border: 0.1px solid #EEEBDD;
+}
+header .menu-1 ul li a {
+  color: #EEEBDD;
+  text-decoration: none;
+  font-size: 22px;
+}
+header .menu-1 ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: -1px -7px 38px 1px #EEEBDD;
+}
+header .icono {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  display: none;
+}
+header .icono .barra {
+  width: 70%;
+  height: 3px;
+  background: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.menu-2 {
+  width: 0px;
+  overflow: hidden;
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #610000;
+}
+.menu-2 img {
+  width: 100px;
+  height: 100px;
+}
+.menu-2 ul {
+  width: 80%;
+}
+.menu-2 ul li {
+  text-align: center;
+  list-style: none;
+  margin-top: 20px;
+  transition: 1s;
+  border-radius: 10px;
+}
+.menu-2 ul li a {
+  color: #EEEBDD;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.inicio {
+  width: 100%;
+  height: 100%;
+}
+.inicio .fondo {
+  width: 100%;
+  height: 100%;
+  background: url("../multi/productos.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inicio .fondo .palabras {
+  width: 45%;
+  height: 95%;
+  background: rgba(93, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.inicio .fondo .palabras .container-words {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: 70%;
+}
+.inicio .fondo .palabras .container-words h6 {
+  font-family: vivaldi;
+  font-size: 40px;
+  border-bottom: 2px solid #1b1717;
+  width: 50%;
+}
+.inicio .fondo .palabras .container-words p {
+  font-size: 25px;
+  color: #EEEBDD;
+  margin-top: 20px;
+}
+.inicio .fondo .palabras .container-words .btn-1 {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid #EEEBDD;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -1px -7px 38px 1px #EEEBDD;
+}
+.inicio .fondo .palabras .container-words .btn-1 a {
+  color: #EEEBDD;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.marcas {
+  width: 100%;
+  height: 50%;
+  background: #1b1717;
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100%;
+}
+.marcas .tria-1, .marcas .tria-2 {
+  width: 70px;
+  height: 0;
+  border-bottom: 150px solid transparent;
+  position: absolute;
+  top: 0;
+}
+.marcas .tria-1 {
+  border-left: 500px solid #830000;
+  left: 0;
+}
+.marcas .tria-2 {
+  border-right: 500px solid #830000;
+  right: 0;
+}
+.marcas img {
+  align-self: center;
+  justify-self: center;
+  width: 160px;
+  height: 160px;
+  position: relative;
+  z-index: 3;
+}
+
+.sobre1 {
+  width: 100%;
+  height: 50%;
+  background: #1b1717;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sobre1 h6 {
+  color: #830000;
+  font-size: 40px;
+  font-family: vivaldi;
+}
+.sobre1 h1 {
+  color: #EEEBDD;
+  font-family: freestyle script;
+  font-size: 90px;
+  border-bottom: 2px solid #830000;
+  width: 70%;
+  margin-bottom: 20px;
+}
+.sobre1 p {
+  font-size: 28px;
+  color: #EEEBDD;
+  width: 60%;
+}
+
+.sobre2 {
+  width: 100%;
+  height: 100%;
+  background: #1b1717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sobre2 img {
+  width: 300px;
+  height: 70%;
+  box-shadow: -1px -7px 38px 1px #EEEBDD;
+  border-radius: 20px;
+}
+.sobre2 .content-sobre {
+  width: 50%;
+  height: 50%;
+  margin-left: 30px;
+  color: #EEEBDD;
+}
+.sobre2 .content-sobre h5 {
+  font-family: vivaldi;
+  font-size: 40px;
+  color: #830000;
+}
+.sobre2 .content-sobre h1 {
+  font-size: 40px;
+  border-bottom: 2px solid #610000;
+}
+.sobre2 .content-sobre p {
+  font-size: 30px;
+}
+.sobre2 .content-sobre .btn-2 {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid #EEEBDD;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sobre2 .content-sobre .btn-2 a {
+  color: #EEEBDD;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.inter-fondo {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../multi/produc.jpg");
+  background-size: cover;
+  background-position: center;
+  font-size: 50px;
+  font-family: vivaldi;
+  color: #830000;
+  box-shadow: 1px 3px 30px 31px #610000;
+  position: relative;
+  z-index: 5;
+}
+
+.productos {
+  width: 100%;
+  height: 100%;
+  background: #1b1717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productos .vender {
+  width: 350px;
+  height: 60%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #830000;
+  color: #EEEBDD;
+  box-shadow: 1px 3px 97px -42px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: 0.5s;
+  text-align: center;
+}
+.productos .vender img {
+  width: 100%;
+  height: 70%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.productos .vender .btn-3 {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #EEEBDD;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+.productos .vender .btn-3 a {
+  color: #EEEBDD;
+  text-decoration: none;
+}
+.productos .vender:hover {
+  transform: translateY(-10px);
+}
+
+.contacto {
+  width: 100%;
+  height: 100%;
+  background: #1b1717;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.contacto h1 {
+  color: #830000;
+  font-size: 70px;
+  font-family: vivaldi;
+  border-bottom: 2px solid #610000;
+  width: 50%;
+  text-align: center;
+}
+.contacto form {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contacto form textarea, .contacto form button {
+  outline: none;
+}
+.contacto form textarea {
+  width: 250px;
+  height: 160px;
+  box-shadow: 0px 0px 0px 13px #610000;
+  max-height: 160px;
+  min-height: 160px;
+  max-width: 250px;
+  min-width: 250px;
+}
+.contacto form button {
+  width: 120px;
+  height: 20%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 50%;
+  background: #830000;
+}
+
+/*# sourceMappingURL=index2.css.map */

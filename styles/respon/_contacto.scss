@@ -1,0 +1,41 @@
+@media (min-width: 50px) and (max-width: 780px){
+.contacto{
+	height: auto;
+
+}
+
+
+}
+
+@media (min-width: 50px) and (max-width: 629px){
+
+.contacto{
+	height: auto+2%;
+	flex-direction: column;
+	.words-contacto{
+		width: 100%;
+	}
+	.info-contacto{
+		width: 100%;
+	}
+
+}
+
+
+}
+@media (min-width: 50px) and (max-width: 360px){
+.contacto{
+	.words-contacto{
+		h5{
+			font-size: 12px;
+		}
+		h1{
+			font-size: 30px;
+		}
+		p{
+			font-size: 20px;
+		}
+	}
+}
+
+}
