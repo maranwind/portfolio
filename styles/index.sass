@@ -1,39 +1,205 @@
-*
-	margin: 0
-	padding: 0
-	box-sizing: 0
+
+@font-face
+	font-family: BarberShop in Thailand
+	font-family: Indiana Personal Use
+	src: url('fonts/AboutLove.ttf') format('truetype')
+	src : url('fonts/BarberShopinThailand.ttf') format('truetype')
+
+$blanco: rgba(241,241,241)
+
+$morado: rgba(189, 158, 204)
+
+$morado_letras: #967CAD
+
+$blanco_oscuro: #DAD1D6
+
+
+$subtitulos: BarberShop in Thailand
+
+
+$tamagno: 45px
+
+
 
 body
+	background-color: $blanco
 	overflow-x: hidden
 
-/*Paleta de colores*/
+body::-webkit-scrollbar 
+	width: 8px              /* width of the entire scrollbar */
 
-$negro: #151515
 
-$morado: #301B3F
+body::-webkit-scrollbar-track 
+	background: $blanco    /* color of the tracking area */
 
-$azul: #3C415C
 
-$letras: #B4A5A5
+body::-webkit-scrollbar-thumb 
+	background-color: rgba(224,203,222)    /* color of the scroll thumb */
+	border-radius: 20px       /* roundness of the scroll thumb */
+	border: 2px solid rgba(224,203,222)   /* creates padding around scroll thumb */
 
-/*Paleta de colores*/
+/*menu*/
+.menu
+	background-color: rgba(224,203,222)
 
-@import _menu
+.logo
+	width: 250px
+	height: 60px
+/*menu*/
 
-@import _presen_slide
 
-@import _sobre1
+/*Principal*/
 
-@import _sobre2
+.Principal
+	display: flex
+	justify-content: space-around
+	align-items: center
+	.imagen-descrip
+		width: 60%
+		margin: 5px
+		padding: 30px
+		height: 420px
+		.centrar-descrip
+			width: 100%
+			height: 100%
+			background-image: url("../resources/encerrar1.png")
+			background-size: 95%
+			background-repeat: no-repeat
+			background-position: center
+			display: flex
+			flex-direction: column
+			padding: 40px	
+			.nombre
+				font-family: About Love
+				font-size: 20px
+				color: $morado_letras
+				width: 200px
+				border-bottom: 2px solid $morado_letras
+				margin-left: 40px
+			.descripcion
+				color: $morado_letras
+				margin-left: 30px
+				font-size: 19px
+	.circulo-imagen
+		width: 40%
+		display: flex
+		justify-content: center
+		align-items: centrar-descrip
+		img
+			width: 90%
+			height: 90%
 
-@import _sobre3
+/*Principal*/
 
-@import _port
+.servicios
+	background-color: $morado
+	.titulo_servicios
+		color: $blanco
+		width: 300px
+		border-bottom: 2px solid $blanco
+		font-family: $subtitulos
+		h1
+			font-size: $tamagno
 
-@import _habil
+.Sobre_mi
+	background-color: $blanco_oscuro
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 10px
+	h1
+		color: $blanco
+		width: 300px
+		border-bottom: 2px solid $blanco
+		font-family: $subtitulos
+		font-size: $tamagno
+	.contenido
+		width: 100%
+		display: flex
+		justify-content: space-around
+		align-items: center
+		padding: 10px
+		margin: 5px 0px 5px 0px
+		.imagen_persona
+			width: 40%
+			margin: 10px 10px 10px 0px
+			display: flex
+			justify-content: center
+			img
+				width: 80%
+		.descripcion_mia
+			background-image: url('../resources/encerrar2.png')
+			background-size: 90%
+			background-position: center
+			background-repeat: no-repeat
+			margin: 5px
+			width: 50%
+			height: 310px
+			padding: 30px
+			.nombre
+				font-family: About Love
+				font-size: 20px
+				color: $morado_letras
+				width: 200px
+				border-bottom: 2px solid $morado_letras
+				margin-left: 35px
+			.descripcion
+				color: $morado_letras
+				margin-left: 30px
+				font-size: 19px
+				padding: 5px
 
-@import _contacto
 
-@import _pie
+.Trabajos
+	.titulo_trabajos
+		border-bottom: 2px solid $morado
+		width: 300px
+		h1
+			color: $morado
+			font-family: $subtitulos
+			font-size: $tamagno
 
+
+
+.centro2
+	width: 420px
+	height: 260px
+
+.centro3
+	width: 420px
+	height: 260px
+
+
+/*`Habilidades*/
+.Habilidades
+	background-color: $blanco_oscuro
+	.titulo_habilidades
+		width: 300px
+		color: $morado
+		border-bottom: 2px solid $morado
+		font-family: $subtitulos
+		h1
+			font-size: $tamagno
+
+
+
+.letras
+	color: $morado_letras
+/*`Habilidades*/
+
+
+.Contacto
+	.titulo_contacto
+		width: 300px
+		color: $morado
+		border-bottom: 2px solid $morado
+		font-family: $subtitulos
+		h1
+			font-size: $tamagno	
+
+
+footer
+	background-color: $morado
+	height: 200px
+	width: 100%
 

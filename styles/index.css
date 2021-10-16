@@ -1,555 +1,209 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0;
+@font-face {
+  font-family: BarberShop in Thailand;
+  font-family: Indiana Personal Use;
+  src: url("fonts/AboutLove.ttf") format("truetype");
+  src: url("fonts/BarberShopinThailand.ttf") format("truetype");
 }
-
 body {
+  background-color: #f1f1f1;
   overflow-x: hidden;
 }
 
-/*Paleta de colores*/
-/*Paleta de colores*/
-header {
-  width: 100%;
-  height: 15%;
-  background: #151515;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 21;
-}
-header .marca {
-  font-family: vivaldi;
-  font-size: 23px;
-  color: white;
-}
-header .icono {
-  width: 50px;
-  height: 50px;
-  margin-top: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-header .icono .barra {
-  width: 50px;
-  height: 2px;
-  background: white;
-  border-radius: 30px;
-  margin-top: 10px;
-  cursor: pointer;
+body::-webkit-scrollbar {
+  width: 8px;
 }
 
-nav {
-  width: 0;
-  overflow: hidden;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #151515;
-  position: fixed;
-  z-index: 20;
-  transition: 0.5s;
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
-nav ul {
-  text-align: center;
-}
-nav ul li {
-  list-style: none;
-  margin: 10px;
-  background: #301B3F;
+
+body::-webkit-scrollbar-thumb {
+  background-color: #e0cbde;
   border-radius: 20px;
-  width: 150px;
-  height: 30px;
-  transition: 1s;
-  border: 1px solid white;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 25px;
-}
-nav ul li:hover {
-  background: white;
-}
-nav ul li:hover a {
-  color: #301B3F;
+  border: 2px solid #e0cbde;
 }
 
-.container-slider {
-  width: 500%;
-  height: 100%;
-  transform: translate(-20%);
-  transition: 1s;
-  display: flex;
-}
-.container-slider .slide {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-.container-slider .slide .cubre {
-  width: 100%;
-  height: 100%;
-  background: rgba(21, 21, 21, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-}
-.container-slider .slide .cubre h2, .container-slider .slide .cubre p, .container-slider .slide .cubre .boton {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: 0.5s;
-}
-.container-slider .slide .cubre h2 {
-  font-family: vivaldi;
-  font-size: 40px;
-  border-bottom: 3px solid #301B3F;
-}
-.container-slider .slide .cubre p {
-  font-size: 30px;
-  width: 50%;
-}
-.container-slider .slide .cubre .boton {
-  margin-bottom: 10%;
-  margin-top: 20px;
-  width: 150px;
-  height: 60px;
-  background: #301B3F;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-}
-.container-slider .slide .cubre .boton a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-.container-slider .slide:nth-child(1), .container-slider .slide:nth-child(4) {
-  background: url("../multi/imagenes/otro2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.container-slider .slide:nth-child(2), .container-slider .slide:nth-child(5) {
-  background: url("../multi/imagenes/fondo2.jpg");
-  background-size: cover;
-  background-position: center;
-}
-.container-slider .slide:nth-child(3) {
-  background: url("../multi/imagenes/otro.jpg");
-  background-size: cover;
-  background-position: center;
+/*menu*/
+.menu {
+  background-color: #e0cbde;
 }
 
-.iz, .der {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.iz {
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.der {
-  right: 0;
-}
-
-.sobre1 {
-  width: 100%;
-  height: 70%;
-  background: #3C415C;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  color: #B4A5A5;
-}
-.sobre1 h5 {
-  font-size: 30px;
-  font-family: vivaldi;
-  color: #B4A5A5;
-}
-.sobre1 h1 {
-  font-size: 60px;
-  border-bottom: 2px solid #B4A5A5;
-  width: 50%;
-  margin-bottom: 10px;
-}
-.sobre1 p {
-  font-size: 26px;
-  width: 80%;
-}
-.sobre1 img {
-  width: 100px;
-  height: 100px;
-  margin-top: 5px;
-}
-
-.sobre2 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background: #301B3F;
-}
-.sobre2 .content-1 {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  color: #B4A5A5;
-}
-.sobre2 .content-1 h5 {
-  font-size: 25px;
-  font-family: vivaldi;
-}
-.sobre2 .content-1 h1 {
-  font-size: 60px;
-  border-bottom: 2px solid #B4A5A5;
-  margin-bottom: 15px;
-  width: 80%;
-}
-.sobre2 .content-1 p {
-  font-size: 25px;
-  width: 80%;
-}
-.sobre2 .anima {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sobre2 .anima .content-anima {
-  width: 300px;
-  height: 300px;
-  position: relative;
-}
-.sobre2 .anima .content-anima .engranaje1, .sobre2 .anima .content-anima .engranaje2 {
-  width: 40%;
-  height: 40%;
-  position: absolute;
-  animation: vueltas 2s linear infinite;
-}
-.sobre2 .anima .content-anima .cerebro {
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-}
-.sobre2 .anima .content-anima .engranaje1 {
-  top: 0;
-  left: 0;
-}
-.sobre2 .anima .content-anima .engranaje2 {
-  bottom: 0;
-  right: 0;
-}
-
-@keyframes vueltas {
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-.sobre3 {
-  width: 100%;
-  height: 100%;
-  background: #3C415C;
-  display: flex;
-}
-.sobre3 .imagen-2 {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sobre3 .imagen-2 .gear-mundo {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sobre3 .imagen-2 .gear-mundo .gear2 {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  animation: vuelta2 3s linear infinite;
-}
-.sobre3 .imagen-2 .gear-mundo .globo {
-  width: 230px;
-  height: 230px;
-  position: relative;
-  z-index: 10;
-  animation: mundo 3s linear infinite;
-}
-.sobre3 .content-sobre3 {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  color: #B4A5A5;
-}
-.sobre3 .content-sobre3 h5 {
-  font-size: 25px;
-  font-family: vivaldi;
-}
-.sobre3 .content-sobre3 h1 {
-  width: 90%;
-  font-size: 50px;
-  border-bottom: 2px solid #B4A5A5;
-  margin-bottom: 15px;
-}
-.sobre3 .content-sobre3 p {
-  font-size: 25px;
-  width: 90%;
-}
-
-@keyframes vuelta2 {
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-@keyframes mundo {
-  50% {
-    transform: translateY(-12px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-.port {
-  width: 100%;
-  height: 100%;
-  background: #301B3F;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-.port .palabras-port {
-  text-align: center;
-  color: #B4A5A5;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.port .palabras-port h5 {
-  margin: 0;
-  font-size: 30px;
-  font-family: vivaldi;
-}
-.port .palabras-port h1 {
-  font-size: 70px;
-  margin: 0;
-  border-bottom: 1px solid #B4A5A5;
-  width: 350px;
-}
-.port .palabras-port p {
-  font-size: 20px;
-  width: 60%;
-  margin-top: 10px;
-}
-.port .content-works {
-  display: flex;
-  justify-content: space-around;
-  color: #B4A5A5;
-  height: 80%;
-}
-.port .content-works .paginas {
-  width: 230px;
-  height: 270px;
-  background: #3C415C;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  position: relative;
-  margin: 10px;
-}
-.port .content-works .paginas img {
-  width: 100%;
-  height: 50%;
-}
-.port .content-works .paginas p {
-  width: 97%;
-  margin-top: 5px;
-}
-.port .content-works .paginas .boton-pag {
-  width: 100px;
-  height: 25px;
-  border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 10px;
-  border-radius: 20px;
-  background: #301B3F;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-.port .content-works .paginas .boton-pag a {
-  text-decoration: none;
-  color: white;
-  margin: auto;
-}
-.port .content-works .paginas::before, .port .content-works .paginas::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  background: #fff;
-  transition: all 0.5s;
-}
-.port .content-works .paginas:before {
-  height: 3px;
-  width: 0%;
-  bottom: 0;
-  box-shadow: 240px -267px #fff;
-}
-.port .content-works .paginas:after {
-  width: 3px;
-  height: 0%;
-  top: 0;
-  box-shadow: 227px 230px #fff;
-}
-.port .content-works .paginas:hover:after {
-  height: 100%;
-  box-shadow: 227px 0 #fff;
-}
-.port .content-works .paginas:hover:before {
-  width: 100%;
-  box-shadow: 0 -267px #fff;
-}
-
-.habilidades {
-  width: 100%;
-  height: 100%;
-  background: #3C415C;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.habilidades h1 {
-  width: 300px;
-  font-size: 50px;
-  color: #B4A5A5;
-  font-family: vivaldi;
-  border-bottom: 2px solid #B4A5A5;
-  text-align: center;
-}
-.habilidades .skills {
-  width: 80%;
-  height: 80%;
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 50% 50%;
-}
-.habilidades .skills img {
-  width: 120px;
-  height: 120px;
-  align-self: center;
-  justify-self: center;
-  cursor: pointer;
-}
-
-.contacto {
-  width: 100%;
-  height: 100%;
-  background: #301B3F;
-  display: flex;
-}
-.contacto .words-contacto {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #B4A5A5;
-  text-align: center;
-}
-.contacto .words-contacto h5 {
-  font-size: 20px;
-  font-family: vivaldi;
-}
-.contacto .words-contacto h1 {
-  width: 300px;
-  border-bottom: 3px solid #151515;
-  font-size: 50px;
-}
-.contacto .words-contacto p {
-  width: 95%;
-  margin-top: 10px;
-  font-size: 25px;
-}
-.contacto .info-contacto {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.contacto .info-contacto .telegram {
-  display: flex;
-  margin: 10px;
-}
-.contacto .info-contacto .telegram img {
-  height: 50px;
-  border-radius: 20px;
-}
-.contacto .info-contacto .telegram img:nth-child(1) {
-  width: 50px;
-}
-.contacto .info-contacto .correo {
-  margin: 10px;
-}
-.contacto .info-contacto .correo img {
-  border-radius: 20px;
+.logo {
   width: 250px;
+  height: 60px;
 }
-.contacto .info-contacto .redes {
+
+/*menu*/
+/*Principal*/
+.Principal {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.Principal .imagen-descrip {
+  width: 60%;
+  margin: 5px;
+  padding: 30px;
+  height: 420px;
+}
+.Principal .imagen-descrip .centrar-descrip {
+  width: 100%;
+  height: 100%;
+  background-image: url("../resources/encerrar1.png");
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+.Principal .imagen-descrip .centrar-descrip .nombre {
+  font-family: About Love;
+  font-size: 20px;
+  color: #967CAD;
+  width: 200px;
+  border-bottom: 2px solid #967CAD;
+  margin-left: 40px;
+}
+.Principal .imagen-descrip .centrar-descrip .descripcion {
+  color: #967CAD;
+  margin-left: 30px;
+  font-size: 19px;
+}
+.Principal .circulo-imagen {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: centrar-descrip;
+}
+.Principal .circulo-imagen img {
+  width: 90%;
+  height: 90%;
+}
+
+/*Principal*/
+.servicios {
+  background-color: #bd9ecc;
+}
+.servicios .titulo_servicios {
+  color: #f1f1f1;
+  width: 300px;
+  border-bottom: 2px solid #f1f1f1;
+  font-family: BarberShop in Thailand;
+}
+.servicios .titulo_servicios h1 {
+  font-size: 45px;
+}
+
+.Sobre_mi {
+  background-color: #DAD1D6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.Sobre_mi h1 {
+  color: #f1f1f1;
+  width: 300px;
+  border-bottom: 2px solid #f1f1f1;
+  font-family: BarberShop in Thailand;
+  font-size: 45px;
+}
+.Sobre_mi .contenido {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0px 5px 0px;
+}
+.Sobre_mi .contenido .imagen_persona {
+  width: 40%;
+  margin: 10px 10px 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+.Sobre_mi .contenido .imagen_persona img {
+  width: 80%;
+}
+.Sobre_mi .contenido .descripcion_mia {
+  background-image: url("../resources/encerrar2.png");
+  background-size: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 5px;
+  width: 50%;
+  height: 310px;
+  padding: 30px;
+}
+.Sobre_mi .contenido .descripcion_mia .nombre {
+  font-family: About Love;
+  font-size: 20px;
+  color: #967CAD;
+  width: 200px;
+  border-bottom: 2px solid #967CAD;
+  margin-left: 35px;
+}
+.Sobre_mi .contenido .descripcion_mia .descripcion {
+  color: #967CAD;
+  margin-left: 30px;
+  font-size: 19px;
+  padding: 5px;
+}
+
+.Trabajos .titulo_trabajos {
+  border-bottom: 2px solid #bd9ecc;
   width: 300px;
 }
-.contacto .info-contacto .redes img {
-  width: 50px;
-  height: 50px;
+.Trabajos .titulo_trabajos h1 {
+  color: #bd9ecc;
+  font-family: BarberShop in Thailand;
+  font-size: 45px;
+}
+
+.centro2 {
+  width: 420px;
+  height: 260px;
+}
+
+.centro3 {
+  width: 420px;
+  height: 260px;
+}
+
+/*`Habilidades*/
+.Habilidades {
+  background-color: #DAD1D6;
+}
+.Habilidades .titulo_habilidades {
+  width: 300px;
+  color: #bd9ecc;
+  border-bottom: 2px solid #bd9ecc;
+  font-family: BarberShop in Thailand;
+}
+.Habilidades .titulo_habilidades h1 {
+  font-size: 45px;
+}
+
+.letras {
+  color: #967CAD;
+}
+
+/*`Habilidades*/
+.Contacto .titulo_contacto {
+  width: 300px;
+  color: #bd9ecc;
+  border-bottom: 2px solid #bd9ecc;
+  font-family: BarberShop in Thailand;
+}
+.Contacto .titulo_contacto h1 {
+  font-size: 45px;
 }
 
 footer {
+  background-color: #bd9ecc;
+  height: 200px;
   width: 100%;
-  height: 50%;
-  background: #151515;
 }
 
 /*# sourceMappingURL=index.css.map */

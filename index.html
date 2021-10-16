@@ -1,339 +1,563 @@
+<!DOCTYPE html>
 <html>
 <head>
 
+	<title>Marcos Vargas | Portfolio</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+
+<!-- Iconos -->
+	<link rel="icon" type="" href="resources/compu.png">
+	<link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+<!-- Iconos -->
+
+<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+
+<!-- Customización -->
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link rel="stylesheet" type="text/css" href="styles/index_response.css">
+
+	<style type="text/css">
+		.preloader {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           position: fixed;
+           z-index: 999;
+           background-color: white;
+           width: 100%;
+           height: 100%;
+           overflow: hidden;
+           transition: 1s;
+        }
+
+        .container {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 100vh;
+		  padding: 1rem;
+		}
+
+		@media (max-width: 567px) {
+		  h1 {
+		    font-size: 7vw;
+		    text-align: center;
+		  }
+		}
 
 
-	<title>Marcos A. Vargas</title>
+		/* Loader Styles start here */
+		.loader-wrapper {
+		  --line-width: 5px;
+		  --curtain-color: #f1faee;
+		  --outer-line-color: #a8dadc;
+		  --middle-line-color: #457b9d;
+		  --inner-line-color: #1d3557;
+		  position:fixed;
+		  top:0;
+		  left:0;
+		  width:100%;
+		  height:100%;
+		  z-index:1000;
+		}
 
+		.loader {
+		  display:block;
+		  position: relative;
+		  top:50%;
+		  left:50%;
+		/*   transform: translate(-50%, -50%); */
+		  width:150px;
+		  height:150px;
+		  margin:-75px 0 0 -75px;
+		  border:var(--line-width) solid transparent;
+		  border-top-color: var(--outer-line-color);
+		  border-radius:100%;
+		  -webkit-animation: spin 2s linear infinite;
+		          animation: spin 2s linear infinite;
+		  z-index:1001;
+		}
 
-<link rel="stylesheet" type="text/css" href="styles/index.css">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
-<link rel="stylesheet" type="text/css" href="styles/respon/indexRes.css">
+		.loader:before {
+		  content:"";
+		  position: absolute;
+		  top:4px;
+		  left:4px;
+		  right:4px;
+		  bottom:4px;
+		  border:var(--line-width) solid transparent;
+		  border-top-color: var(--inner-line-color);
+		  border-radius:100%;
+		  -webkit-animation: spin 3s linear infinite;
+		          animation: spin 3s linear infinite;
+		}
+
+		.loader:after {
+		  content:"";
+		  position: absolute;
+		  top:14px;
+		  left:14px;
+		  right:14px;
+		  bottom:14px;
+		  border:var(--line-width) solid transparent;
+		  border-top-color: var(--middle-line-color);
+		  border-radius:100%;
+		  -webkit-animation: spin 1.5s linear infinite;
+		          animation: spin 1.5s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+		  0%   { 
+		    -webkit-transform: rotate(0deg); 
+		      -ms-transform: rotate(0deg); 
+		          transform: rotate(0deg);
+		  }
+		  100% { 
+		    -webkit-transform: rotate(360deg); 
+		      -ms-transform: rotate(360deg); 
+		          transform: rotate(360deg);
+		  }
+		}
+		@keyframes spin {
+		  0%   { 
+		    -webkit-transform: rotate(0deg); 
+		      -ms-transform: rotate(0deg); 
+		          transform: rotate(0deg);
+		  }
+		  100% { 
+		    -webkit-transform: rotate(360deg); 
+		      -ms-transform: rotate(360deg); 
+		          transform: rotate(360deg);
+		  }
+		}
+
+		.loader-wrapper .loader-section {
+		  position:fixed;
+		  top:0;
+		  background:var(--curtain-color);
+		  width:51%;
+		  height:100%;
+		  z-index:1000;
+		}
+
+		.loader-wrapper .loader-section.section-left {
+		  left:0
+		}
+		.loader-wrapper .loader-section.section-right {
+		  right:0;
+		}
+
+		/* Loaded Styles */ 
+		.loaded .loader-wrapper .loader-section.section-left {
+		  transform: translateX(-100%);
+		  transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
+		}
+		.loaded .loader-wrapper .loader-section.section-right {
+		  transform: translateX(100%);
+		  transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
+		}
+		.loaded .loader {
+		  opacity: 0;
+		  transition: all 0.3s ease-out;
+		}
+		.loaded .loader-wrapper {
+		  visibility: hidden;
+		  transform:translateY(-100%);
+		  transition: all .3s 1s ease-out;
+		}
+
+	</style>
+
 </head>
 <body>
-<!-- Menu de navegación -->
-<header>
-		<div class="marca">
-			<h2>Marcos A. Vargas</h2> 
-			
-		</div>
 
 
 
-		<div class="icono">
-			<div class="barra"></div>
-			<div class="barra"></div>
-			<div class="barra"></div>
-		</div>
-</header>
+	<div class="loader-wrapper">
+	  <div class="loader"></div>
+	  <div class="loader-section section-left"></div>
+	  <div class="loader-section section-right"></div>
+	</div>
 
-<nav>
-		<img src="">
-	<ul>
-		<li><a href="#inicio">Inicio</a></li>
-		<li><a href="#sobre">Sobre mí</a></li>
-		<li><a href="#port">Portfolio</a></li>
-		<li><a href="#habil">Habilidades</a></li>
-		<li><a href="#cont">Contacto</a></li>
-	</ul>
 
+<nav class="navbar navbar-expand-lg navbar-light menu position-fixed w-100" style="z-index: 99">
+	  <div class="container-fluid">
+		    
+		    <a class="navbar-brand" href="#">
+		    	<img src="resources/todo_logo.png" class="logo">
+		    </a>
+	   
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+	   
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			    
+				        <li class="nav-item list">
+				          <a class="nav-link" href="#servicios">Servicios</a>
+				        </li>
+
+				        <li class="nav-item list">
+				          <a class="nav-link" href="#Sobre_mi">Sobre mí</a>
+				        </li>
+
+				        <li class="nav-item list">
+				          <a class="nav-link" href="#Trabajos">Trabajos</a>
+				        </li>
+
+				        <li class="nav-item list">
+				          <a class="nav-link" href="#Habilidades">Habilidades</a>
+				        </li>
+
+				        <li class="nav-item list">
+				          <a class="nav-link" href="#Contacto">Contacto</a>
+				        </li>
+			       
+			      </ul>
+		    </div>
+	  </div>
 </nav>
 
-<!-- Menu de navegación -->
+<br><br>
+<section class="Principal pt-5">
+		<div class="imagen-descrip">
+			<div class="centrar-descrip">
 
-<!-- Presentación slider -->
+				<div class="nombre">
+					<h2>Marcos Vargas</h2>
+				</div>
 
-
-
-	<img src="multi/iconos/flecha.svg" class="iz">
-
-<section class="container-slider" id="inicio"> 
-	
-
-	<div class="slide">
-		<div class="cubre">
-			
-
-
-		</div>
-	</div>
-
-	
-
-	<div class="slide">
-		<div class="cubre">
-			
-
-				<h2>Desarrollo web</h2>
-			<p>Puedo fabricarte todo lo que necesites para que entres en el mundo digital.</p>
-			<div class="boton">
-				<a href="#cont">Contacto</a>
-			</div>
-
-
-		</div>
-	</div>
-	
-	
-
-	<div class="slide">
-		<div class="cubre">
-			
-
-		<h2>Aplicaciones web</h2>
-		<p>Puedo diseñarte las herramientas necesarias que quieras para tus proyectos</p>
-		<div class="boton">
-			<a href="#cont">Contacto</a>
-		</div>
-
-
-		</div>
-	</div>
-	
-	
-
-	<div class="slide">
-		<div class="cubre">
-			
-
-		<h2 class="pequeno">Adaptación a dispositivos móviles</h2>
-		<p>Puedo adaptar tu sitio o aplicación a todos los dispositivos, para que esten presentes en todo lugar.</p>
-		<div class="boton">
-			<a href="#cont">Contacto</a>
-		</div>
-
-		
-		</div>
-	</div>
-
-
-
-	<div class="slide">
-		
-		<div class="cubre">
-			
-
-
-		</div>
-
-
-	</div>
-
-
-	
-</section>
-<img src="multi/iconos/flecha.svg" class="der">
-<!-- Presentación slider -->
-
-
-<!-- Sobre mi -->
-<section class="sobre1">
-
-
-
-	<h5>Marcos A. Vargas</h5>
-		<h1>Sobre mí</h1>
-		<p>Soy un desarrollador web capacitado para diseñar lo que tú necesites. Desde, sitios web,
-			aplicaciones web, aplicaciones híbridas o carritos de compras.</p>
-
-		<img src="multi/iconos/mundo.png">
-
-
-
-</section>
-<!-- Sobre mi -->
-
-<!--Sobre mi 2  -->
-<section class="sobre2" id="sobre">
-
-	<div class="content-1">
-		<h5>Marcos Vargas</h5>
-		<h1>Objetivos</h1>
-	
-		<p>Mis ideas principales son la originalidad, innovación y hacer un proyecto de facil expansión a futuro.</p>
-
-	</div>	
-
-	
-	<div class="anima">
-		
-		<div class="content-anima">
-			<img src="multi/brain.png" class="cerebro">
-			
-			<img src="multi/gear.png" class="engranaje1">
-			
-			<img src="multi/gear.png" class="engranaje2">
-
-		</div>
-
-	</div>
-	
-
-
-</section>
-
-<!-- Sobre mi 2 -->
-
-<!-- sobre3 -->
-
-<section class="sobre3">
-		<div class="imagen-2">
-			
-			<div class="gear-mundo">
-				<img src="multi/gear2.png" class="gear2">
-				<img src="multi/globo.png" class="globo">
-			</div>
-
-		</div>
-
-		<div class="content-sobre3">
-
-	
-		<h5>Marcos Vargas</h5>
-		<h1>Mi trabajo</h1>
-	
-		<p>Busco todas las alternativas para que el trabajo final sea evidente para mis clientes, facil de manejar y de sencilla comprensión, tanto en aplicaciones web, sitios web, y paginas web.</p>
-
-		</div>
-
-</section>
-
-
-<!-- sobre3 -->
-
-<!-- Portfolio -->
-
-<section class="port" id="port" styles="
-					height: 110%;
+				<div class="descripcion mt-2">
+					<p>¡Bienvenido!</p>
 					
-					">
+					<p>Soy Marcos Vargas y conmigo encontraras la mejor forma para ingresar al mundo digital.</p>
+				</div>
 
-<div class="palabras-port">
-	<h5>Marcos Vargas</h5>
-	<h1>Portfolio</h1>
-	<p>Ve mi instagram para estar pendiente de mis trabajos</p>
-</div>
-	<div class="content-works">
+
+			</div>
+		</div>
+		<div class="circulo-imagen">
+			
+				<img src="resources/laptop_circulo.png" class="imagen-prin slide-up">
+		</div>
+
+</section>
+
+<br>
+
+<section class="servicios position-relative row justify-content-center p-2" id="servicios">
+	
+	<div class="titulo_servicios col-12 text-center">
+		<h1>Servicios</h1>
+	</div>
+
+	<img src="resources/centro_ser.png" class="position-absolute top-50 start-50 translate-middle" style="width: 410px; height: 230px">
+
+
+	<div class="servicios_ofrecer col-12 row justify-content-around mt-5 mb-5">
 		
-	<div class="paginas">
-			<img src="multi/pag1.png">
+		<div class="card col-3 m-2 bg-light text-dark text-center slide-up" style="width: 15rem;">
+		  <p class="card-img-top" style="font-size: 80px"><i class="fas fa-pencil-ruler"></i></p>
+		  
+		  <div class="card-body">
+		  
+		    <h5 class="card-title">Diseño</h5>
+		  
+		  
+		    <a href="#Contacto" class="btn btn-primary">¡Quiero!</a>
+		  
+		  </div>
+		</div>
 
-			<p>Esta es un proyecto web relacionado con el cafe, las tecnologías que se usaron aquí fueron Sass y ecmascript</p>
+		<div class="card col-3 m-2 bg-light text-dark text-center slide-up" style="width: 15rem;">
+		  <p class="card-img-top" style="font-size: 80px"><i class="fas fa-pager"></i></p>
+		  <div class="card-body">
+		    <h5 class="card-title">Páginas web</h5>
+		  
+		    <a href="#Contacto" class="btn btn-primary">¡Quiero!</a>
+		  </div>
+		</div>
 
-			<div class="boton-pag">
-				<a href="cafe/index.html">Ver pagina</a>
-				
-			</div>
+		<div class="card col-3 m-2 bg-light text-dark text-center slide-up" style="width: 15rem;">
+		  
+		  <p class="card-img-top" style="font-size: 80px"><i class="fas fa-cogs"></i></p>
+		  
+		  <div class="card-body">
+		    
+		    <h5 class="card-title">Sistemas web</h5>
+		   
+		    <a href="#Contacto" class="btn btn-primary">¡Quiero!</a>
+		  </div>
+		</div>
+
 	</div>
-	
-	<div class="paginas">
-			<img src="multi/pag2.png">
 
-			<p>Este es una página centrada en el negocio de muebles, las tecnologías en uso fueron html5, css, javascript</p>
+	<br><br><br><br><br>
 
-			<div class="boton-pag">
-				<a href="muebles/index.html">Ver pagina</a>
-				
-			</div>
-	</div>
-
-	<div class="paginas">
-			<img src="multi/pag3.png">
-
-			<p>Este es un proyecto que esta orientado a la venta de vehículos, y las tecnologías usadas fueron Sass y ecmascript</p>
-
-			<div class="boton-pag">
-				<a href="carros/index.html">Ver pagina</a>
-				
-			</div>
-	</div>
-
-	</div>
 </section>
-<!-- Portfolio -->
 
 
-<!-- Habilidades -->
+<section class="Sobre_mi" id="Sobre_mi">
 
-<section class="habilidades" id="habil">
+	<h1 class="text-center">Sobre mí</h1>
 
-	<h1>Habilidades</h1>
-	
-	<div class="skills">
-		<img src="multi/iconos/html.svg">
-		<img src="multi/iconos/css.svg">
-		<img src="multi/iconos/js.svg">
-		<img src="multi/iconos/php.svg">
-		<img src="multi/iconos/boots.png">
-		<img src="multi/iconos/sass.svg">
-		<img src="multi/iconos/git.png">
-		<img src="multi/iconos/sql.png">
+	<div class="contenido">
+		<div class="imagen_persona slide-up"> 
+			<img src="resources/persona.png">
+		</div>
 		
+		<div class="descripcion_mia">
+			<div class="nombre">
+				<h2>Marcos Vargas</h2>
+			</div>
+
+			<div class="descripcion">
+				<p>
+					Soy trabajador freelance en el campo del diseño y desarrollo web, con la capacidad de hacer las aplicaciones que se necesiten para solventar alguna necesidad.
+				</p>
+				
+				<p>
+					No esperes más, porque yo sé que puedo hacer tu proyecto ideal.
+				</p>	
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<section class="Trabajos position-relative row justify-content-center p-2" id="Trabajos">
+
+	<img src="resources/centro2.png" class="centro2 position-absolute top-50 start-50 translate-middle">
+
+	<div class="titulo_trabajos col-12 mb-5 text-center">
+		<h1>Trabajos</h1>
+	</div>
+	
+
+	<div class="col-12 row justify-content-around mt-5 mb-5">
+		
+		<div class="card col-3 bg-light text-dark m-2 slide-up" style="width: 15rem;">
+		  <img src="resources/tienda_online.png" class="card-img-top">
+		  
+		  <div class="card-body text-center">
+		    <h5 class="card-title">Tienda online</h5>
+		    <p class="card-text">
+		    		Diseño y programación de tienda online.
+		    </p>
+		    <a target="_blank" href="https://www.youtube.com/watch?v=2uYgtUcB6_A&t=89s" class="btn btn-primary">Ver proyecto</a>
+		  </div>
+		</div>
+
+
+		<div class="card col-3 bg-light text-dark m-2 slide-up" style="width: 15rem;">
+		  <img src="resources/tienda_online.png" class="card-img-top">
+		  
+		  <div class="card-body text-center">
+		    <h5 class="card-title">Gonzales fp</h5>
+		    <p class="card-text">
+		    	Some quick example text to build.
+		    </p>
+		    <a target="_blank" href="https://www.youtube.com/watch?v=2uYgtUcB6_A&t=89s" class="btn btn-primary">Ver proyecto</a>
+		  </div>
+		</div>		
+
+
+		<div class="card col-3 bg-light text-dark m-2 align-self-center text-center slide-up" style="width: 15rem;">
+		  <img src="resources/instagram.svg" class="card-img-top m-2  rounded mx-auto d-bloc" style="width: 7rem">
+		  
+		  <div class="card-body">
+		    <h5 class="card-title">Mis trabajos</h5>
+		    <p class="card-text">
+		    		Todos mis trabajos, diseños y aplicaciones los subo a mi Instagram, espero lo disfrutes
+		    </p>
+		    <a target="_blank" href="https://www.instagram.com/marcos21vargas/?hl=es" class="btn btn-primary">Ver proyecto</a>
+		  </div>
+		</div>
+		
+
 	</div>
 
 
+			
 </section>
 
-<!-- Habilidades -->
+<section class="Habilidades position-relative row justify-content-center p-2" id="Habilidades">
 
-<!-- Contacto -->
+	<img src="resources/imag_habil.png" class="centro3 position-absolute top-50 start-50 translate-middle mt-5">
 
-<section class="contacto" id="cont">
+
+	<div class="titulo_habilidades col-3 mb-5 text-center">
+		<h1>Habilidades</h1>
+	</div>
 	
-<div class="words-contacto">
 
-	<h5>Marcos A. Vargas</h5>
-	<h1>Contacto</h1>
-	<p>Si quieres llegar al mundo digital, pues a mí me debes llamar, no lo dudes más, pues yo se que puedo hacerte la pagina ideal.<br> ¡Contactame!</p>
-</div>
+	<div class="col-12 row justify-content-around mt-5 mb-5 text-center">
+		
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/html.svg">
+		  	<p>HTML</p>
+		</div>
 
-<div class="info-contacto">
-	
-<div class="telegram">
-	
-	<img src="multi/telegram.png"><img src="multi/numero.jpg">
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/css.svg">
+		  	<p>CSS</p>
+		</div>
 
-</div>
-<div class="correo">
-	
-	<img src="multi/correo.jpg">
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/boots.png">
+			<p>Bootstrap</p>
+		</div>	
 
-</div>
-	<div class="redes">
-	<a href="https://www.facebook.com/profile.php?id=100005673692408">
-		<img src="multi/face.svg">
-	</a>
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/js.svg">
+			<p>Javascript</p>
+		</div>
 
-	<a href="https://www.linkedin.com/in/marcos-vargas-9b9b12206/">
-		<img src="multi/linkedin.svg">
-	</a>
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/php.svg">
+			<p>PHP</p>
+		</div>
 
-	<a href="https://www.instagram.com/marcos21vargas/">
-			<img src="multi/instagram.svg">
-	</a>
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/sql.png">
+			<p>MySQL</p>
+		</div>
+
+
+		<div class="card col-3 m-2 bg-transparent border-0 letras  p-2" style="width: 8rem;">
+		  	<img src="resources/iconos/sass.svg">
+			<p>Sass</p>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/git.png">
+			<p>Git</p>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/react.png">
+			<p>React</p>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/illustrator.png">
+			<p>Illustrator</p>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0 letras" style="width: 8rem;">
+		  	<img src="resources/iconos/camtasia.png">
+			<p>Camtasia</p>
+		</div>
 	</div>
 
-</div>
+	
 </section>
 
-<!-- Contacto -->
+<section class="Contacto position-relative row justify-content-center p-2" id="Contacto">
 
-<footer
+	<img src="resources/contacto_imag.png" class="centro2 position-absolute top-50 start-50 translate-middle">
 
-style="
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 20px;
-color: white;
 
-">
+	<div class="titulo_contacto col-3 m-2 mb-5 text-center">
+		<h1 class="">Contacto</h1>
+	</div>
+
+	<div class="col-12 row justify-content-around mt-5 mb-5">
+		
+		<div class="card col-3 m-2 bg-transparent border-0" style="width: 5rem;">
+			 <a href="https://www.facebook.com/profile.php?id=100005673692408"><img src="resources/face.svg" style="width: 4rem"></a>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0" style="width: 5rem;">
+		  	<a href="https://www.instagram.com/marcos21vargas/?hl=es"><img src="resources/instagram.svg" style="width: 4rem"></a>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0" style="width: 5rem;">
+		  	<a href=""><img src="resources/linkedin.svg" style="width: 4rem"></a>
+		</div>
+
+		<div class="card col-3 m-2 bg-transparent border-0" style="width: 5rem;">
+		  	<a href="https://www.youtube.com/channel/UCeXlQ3b_5Gqi2JVLfzZXu0g"><img src="resources/youtube.png" style="width: 4rem"></a>
+		</div>
+
+	</div>
 	
-<p style="width: 80%;">© 2021 Marcos A. Vargas SL <br> Todos los derechos reservados</p>
+
+	<div class="servicios_ofrecer col-12 row justify-content-around mt-5 mb-5">
+		
+		<div class="card col-5 m-2 bg-light p-2" style="width: 25rem;">
+		  	<form id="mensaje_portfolio">
+				<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+				  <input type="text" class="form-control input_val" id="exampleFormControlInput1" 
+				  placeholder="Nombre" name="nombre">
+				</div>
+		  		
+		  		<div class="mb-3">
+				  <label for="exampleFormControlInput1" class="form-label">Corre electrónico</label>
+				  <input type="email" class="form-control input_val" id="exampleFormControlInput1" placeholder="name@example.com" name="correo">
+				</div>
+				
+				<div class="mb-3">
+				  <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+				  <textarea class="form-control input_val" id="exampleFormControlTextarea1" rows="3" 
+				  placeholder="Escriba su mensaje." name="mensaje"></textarea>
+				</div>
+				<div class="mb-3">
+					<button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
+				</div>
+		  	</form>
+		</div>
+	
+	</div>
+
+
+	<br><br><br><br><br>
+			
+</section>
+
+<footer>
+	
 
 </footer>
-<script type="text/javascript" src="source/index.js"></script>
 
 
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script type="text/javascript">
+
+	window.addEventListener('load',function(){
+	  document.querySelector('body').classList.add("loaded")  
+	});
+
+
+
+
+	var slideUp = {
+    distance: '200px',
+    origin: 'bottom',
+    opacity: 0
+	};
+	var slideUp2 = {
+		delay: 375,
+	    duration: 1000,
+	    reset: true
+	};
+
+	ScrollReveal().reveal('.slide-up', slideUp2);		
+	
+	ScrollReveal().reveal('.slide-up', slideUp);	
+	
+
+
+</script>
 </body>
 </html>

@@ -1,0 +1,148 @@
+
+
+
+/* principal */
+
+@media (min-width: 0px) and (max-width: 739px){
+	/* body{
+		background-color: #000;
+	} */
+	.Principal{
+		flex-direction: column-reverse;
+		padding: 20px;
+		.circulo-imagen{
+			width: 50%;
+		}
+		.imagen-descrip{
+			width: 80%;
+		}
+	}
+
+	.Sobre_mi{
+		.contenido{
+			flex-direction: column;
+			.imagen_persona{
+				width: 90%;
+			}
+			.descripcion_mia{
+				width: 75%;
+			}
+
+		}
+	}
+
+
+}
+
+@media (min-width: 50px) and (max-width: 610px){
+
+
+	.Principal{
+		.circulo-imagen{
+			width: 70%;
+			
+		}
+		.imagen-descrip{
+			width: 95%;
+			.centrar-descrip{
+				padding: 40px;
+			}
+		}
+		
+	}
+
+	.Sobre_mi{
+		.contenido{
+			flex-direction: column;
+			.descripcion_mia{
+				padding: 10px;
+				padding-top: 30px;
+				width: 90%;
+			}
+
+		}
+	}
+
+
+}
+
+
+@media (min-width: 50px) and (max-width: 500px){
+	.Principal{
+		.imagen-descrip{
+			.centrar-descrip{
+				padding: 10px;
+				padding-top: 40px;	
+				.nombre{
+					margin-left: 0;
+				}
+				.descripcion{
+					margin-left: 0;
+				}
+			}
+		}
+		
+	}
+
+
+
+
+}
+@media (min-width: 50px) and (max-width: 420px){
+	.Principal{
+		.imagen-descrip{
+			width: 100%;
+			.centrar-descrip{
+				padding-top: 40px;
+				.nombre{
+					margin-left: 0;
+				}
+				.descripcion{
+					margin-left: 0;
+					font-size: 16px
+				}	
+			}
+		}
+		
+	}
+	.Sobre_mi{
+		.contenido{
+			.descripcion_mia{
+				.descripcion{
+					font-size: 17px;
+				}
+			}
+
+		}
+	}
+
+
+}
+@media (min-width: 50px) and (max-width: 310px){
+	.Principal{
+		.imagen-descrip{
+			width: 100%;
+			.centrar-descrip{
+				padding-top: 40px;
+				.nombre{
+					margin-left: 0;
+				}
+				.descripcion{
+					margin-left: 0;
+					font-size: 16px
+				}	
+			}
+		}
+		
+	}
+
+
+}
+
+
+
+
+
+
+
+
